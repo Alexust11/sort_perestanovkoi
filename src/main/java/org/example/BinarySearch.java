@@ -6,6 +6,12 @@ import java.util.List;
 public class BinarySearch {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList( List.of(2, 3, 4, 14, 2, 80, 21, 3, 56, 79));// List.of нужно обернуть в new ArrayList для того чтобы можно было изменять массив, иначе List.of не изменяемый массив
+        sort(numbers);
+        System.out.println("numbers.toString() = " + numbers.toString());
+
+    }
+
+    private static void sort(List<Integer> numbers) {
         for (int idxCurr = numbers.size() - 1; idxCurr >= 0; idxCurr--) {
           int max=Integer.MIN_VALUE;// самое маленькое число
             int idxMax=0;
@@ -22,7 +28,5 @@ public class BinarySearch {
         numbers.set(idxMax, tmp);
 
     }
-        System.out.println("numbers.toString() = " + numbers.toString());
-
     }
 }
