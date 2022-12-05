@@ -1,12 +1,14 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BinarySearch {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList( List.of(2, 3, 4, 14, 2, 80, 21, 3, 56, 79));// List.of нужно обернуть в new ArrayList для того чтобы можно было изменять массив, иначе List.of не изменяемый массив
-        sort(numbers);
+        Collections.sort(numbers);
+        //sort(numbers); //сортировка разработанным методом
         System.out.println("numbers.toString() = " + numbers.toString());
 
     }
